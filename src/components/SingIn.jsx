@@ -3,7 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-const SingIn = () => {
+const SingIn = ({isOpen,setIsOpen}) => {
   const { handleSubmit, reset, register } = useForm();
   const navigate = useNavigate();
 
@@ -20,6 +20,7 @@ const SingIn = () => {
   };
 
   return (
+
     <form onSubmit={handleSubmit(sendForm)} className="form">
       <input
         type="email"
@@ -34,7 +35,7 @@ const SingIn = () => {
         placeholder="contraseña"
       />
       <button>iniciar sesión</button>
-      <button type="button" onClick={() => navigate("/login")}>
+      <button type="button" onClick={() =>setIsOpen(!isOpen) }>
         cancelar
       </button>
     </form>
