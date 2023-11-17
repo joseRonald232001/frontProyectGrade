@@ -1,0 +1,20 @@
+body{
+    background:dodgerblue ;
+}
+.containerForm{
+    width:100% ; 
+    display: flex;
+    align-items: center;
+   }
+   
+   .containerImgL{ 
+    display: none;     
+   }
+   
+   .containerImgL img{
+    display: none;
+   }
+   
+   .containerRegister{
+   margin: 0 auto;
+   }

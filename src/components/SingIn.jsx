@@ -34,8 +34,8 @@ const SingIn = ({isOpen,setIsOpen}) => {
         autoComplete="none"
         placeholder="contraseña"
       />
-      <button>iniciar sesión</button>
-      <button type="button" onClick={() =>setIsOpen(!isOpen) }>
+      <button style={{background:"#41BCAC",border:"none",color:"#fff" }}>iniciar sesión</button>
+      <button  style={{border:"none"}} type="button" onClick={() =>setIsOpen(!isOpen) }>
         cancelar
       </button>
     </form>

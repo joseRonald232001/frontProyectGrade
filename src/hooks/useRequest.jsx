@@ -31,7 +31,15 @@ const useRequest = () => {
     }
   };
 
-  return { data, requestGet, requestPost, requestPut };
+  const requestDelete = async (url) => {
+    try {
+      const res = await axios.delete(url);
+      console.log("Solicitud delete exitosa:", res.data);
+    } catch (error) {
+      console.error("Error en la solicitud delete:", error);
+    }
+  };
+  return { data, requestGet, requestPost, requestPut,requestDelete };
 };
 
 export default useRequest;

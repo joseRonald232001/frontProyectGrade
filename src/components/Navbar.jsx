@@ -10,17 +10,19 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="flex ">
+      <header className="containerNav container">
+        <nav>
         <Link to={'/'}>
           <h1>Logo</h1>
         </Link>
-        <nav className="">
+        <div className="nav">
           {nav.map((page) => (
             <Link key={page.page} to={page.to}>
               {page.page}
             </Link>
           ))}
-        </nav>
+        </div>
+          </nav>
       </header>
     </>
   );
